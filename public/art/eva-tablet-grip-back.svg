@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" fill="none">
+  <title>EVA tablet support — gloves and pressure sleeves</title>
+  <metadata>Original project artwork, dedicated to the public domain under CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/ . Illustrative EVA equipment; not an engineering reference.</metadata>
+  <defs>
+    <linearGradient id="fabric" x1="70" y1="450" x2="238" y2="568" gradientUnits="userSpaceOnUse"><stop stop-color="#727b7b"/><stop offset=".22" stop-color="#c4c9c5"/><stop offset=".44" stop-color="#f2f0e5"/><stop offset=".64" stop-color="#dedfd6"/><stop offset=".85" stop-color="#929c99"/><stop offset="1" stop-color="#525e61"/></linearGradient>
+    <linearGradient id="hand" x1="103" y1="346" x2="215" y2="453" gradientUnits="userSpaceOnUse"><stop stop-color="#f7f4e8"/><stop offset=".32" stop-color="#e3e3d9"/><stop offset=".64" stop-color="#b5bdb7"/><stop offset="1" stop-color="#586766"/></linearGradient>
+    <linearGradient id="edge" x1="104" y1="396" x2="186" y2="421" gradientUnits="userSpaceOnUse"><stop stop-color="#d7dcd4"/><stop offset=".44" stop-color="#959f99"/><stop offset="1" stop-color="#424f50"/></linearGradient>
+    <linearGradient id="metal"><stop stop-color="#222d32"/><stop offset=".1" stop-color="#85918f"/><stop offset=".19" stop-color="#d2d6cb"/><stop offset=".25" stop-color="#505c60"/><stop offset=".41" stop-color="#263238"/><stop offset=".65" stop-color="#48575b"/><stop offset=".84" stop-color="#1b272d"/><stop offset=".93" stop-color="#8a9590"/><stop offset="1" stop-color="#38464a"/></linearGradient>
+    <linearGradient id="ring" x2="0" y2="1"><stop stop-color="#111b20"/><stop offset=".28" stop-color="#526167"/><stop offset=".5" stop-color="#243138"/><stop offset=".8" stop-color="#111b22"/><stop offset="1" stop-color="#61706d"/></linearGradient>
+    <pattern id="weave" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 1H4M1 0V4" stroke="#fff" stroke-opacity=".12" stroke-width=".55"/><path d="M0 3H4" stroke="#273b3a" stroke-opacity=".12" stroke-width=".5"/></pattern>
+    <filter id="shadow" x="-30%" y="-20%" width="160%" height="160%"><feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#040a0d" flood-opacity=".45"/></filter>
+    <g id="left">
+      <!-- The sleeve axis points toward the grip, with a transverse wrist bearing. -->
+      <path d="M-20 620 82 490Q94 467 119 457L185 474Q210 484 219 512L183 620Z" fill="url(#fabric)" stroke="#65716f" stroke-width="1.3"/>
+      <path d="M-20 620 82 490Q94 467 119 457L185 474Q210 484 219 512L183 620Z" fill="url(#weave)"/>
+      <g stroke-linecap="round">
+        <path d="M75 509Q114 537 191 542M59 535Q99 560 181 571M42 565Q90 590 174 600" stroke="#65716c" stroke-opacity=".3" stroke-width="10"/>
+        <path d="M76 502Q128 535 195 534M59 529Q107 559 184 563M43 558Q100 589 177 591" stroke="#f8f5ea" stroke-opacity=".57" stroke-width="3"/>
+        <path d="m75 544-18 40m125-41-3 43M98 491l-8 18m91 10 8 20" stroke="#566561" stroke-opacity=".38" stroke-width="2"/>
+        <path d="M100 509Q83 550 46 604M171 539q8 40-2 76" stroke="#fff" stroke-opacity=".28" stroke-width="1.6" stroke-dasharray="2 4"/>
+      </g>
+      <path d="m65 572 41 20-10 23-45-18Z" fill="#c1c8bf" stroke="#899790"/>
+      <path d="m70 579 29 14m-32-8 29 14" stroke="#677673" stroke-width="1.2"/>
+      <!-- Padded palm and the fingertips return behind the tablet's left edge. -->
+      <path d="M104 365Q102 348 113 339Q121 332 137 336L172 355Q197 378 206 413L199 450Q190 473 173 486L124 475Q110 463 105 443L92 407Q86 391 96 380Z" fill="url(#hand)" stroke="#8c9890" stroke-width="1.2"/>
+      <path d="M104 365Q102 348 113 339Q121 332 137 336L172 355Q197 378 206 413L199 450Q190 473 173 486L124 475Q110 463 105 443L92 407Q86 391 96 380Z" fill="url(#weave)"/>
+      <path d="M104 402Q106 383 121 382L145 394Q161 410 181 417L184 445 164 470 132 460Q118 450 114 432Z" fill="url(#edge)" stroke="#85918b" stroke-width="1.2"/>
+      <path d="M116 408q5-13 15-11m-11 25q10-12 20-6m-11 24q14-12 24-4m-10 20 15-11" stroke="#d7ddd3" stroke-opacity=".47" stroke-width="1.3" stroke-linecap="round"/>
+      <g fill="url(#hand)" stroke="#8e9b93" stroke-width="1">
+        <path d="M112 347q-7-24 7-31 15-6 28 9l29 37-20 23-29-19Z"/>
+        <path d="M116 373q-11-19 0-28 14-9 27 6l26 29-12 23-27-14Z"/>
+        <path d="M117 399q-14-17-4-26 12-10 27 3l22 19-9 25-21-8Z"/>
+      </g>
+      <path d="m122 329 11 14m-12 14 13 14m-13 15 11 11" stroke="#f9f7e9" stroke-opacity=".65" stroke-width="2" stroke-linecap="round"/>
+      <path d="M113 435q-1 24 23 34m-27-41q-1 25 11 31m55 5-9 13" stroke="#5b6b64" stroke-opacity=".6" stroke-width="1.4" stroke-linecap="round"/>
+      <g transform="translate(153 485) rotate(30)">
+        <rect x="-59" y="-23" width="118" height="48" rx="12" fill="url(#metal)" stroke="#343f43" stroke-width="1.5"/>
+        <rect x="-58" y="-12" width="116" height="24" rx="5" fill="url(#ring)"/>
+        <path d="M-53-5H53M-53 4H53" stroke="#a5afaa" stroke-opacity=".25"/>
+        <path d="M-43-19V19M-33-20V20M34-20V20M44-19V19" stroke="#0a141a" stroke-opacity=".65" stroke-width="3"/>
+        <rect x="-15" y="-18" width="30" height="36" rx="3" fill="#465359" stroke="#a2aba3"/>
+        <rect x="-9" y="-12" width="18" height="24" rx="2" fill="#26353b"/>
+        <path d="M-4-6h8M-4 0h8M-4 6h8" stroke="#d3b87c" stroke-width="2"/>
+      </g>
+    </g>
+  </defs>
+  <g filter="url(#shadow)"><use href="#left"/><use href="#left" transform="translate(900 0) scale(-1 1)"/></g>
+</svg>

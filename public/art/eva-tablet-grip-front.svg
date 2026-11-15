@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" fill="none">
+  <title>EVA tablet grip — thumbs over the bezel</title>
+  <metadata>Original project artwork, CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/ .</metadata>
+  <defs>
+    <linearGradient id="thumb" x1="128" y1="343" x2="181" y2="422" gradientUnits="userSpaceOnUse"><stop stop-color="#fbf7ea"/><stop offset=".24" stop-color="#e6e6dc"/><stop offset=".5" stop-color="#c3cbc2"/><stop offset=".8" stop-color="#89978e"/><stop offset="1" stop-color="#4d5f5c"/></linearGradient>
+    <linearGradient id="pad" x1="155" y1="340" x2="175" y2="384" gradientUnits="userSpaceOnUse"><stop stop-color="#a6b0a7"/><stop offset=".38" stop-color="#7a8981"/><stop offset="1" stop-color="#4e605b"/></linearGradient>
+    <pattern id="weave" width="3.5" height="3.5" patternUnits="userSpaceOnUse"><path d="M0 1H3.5M1 0V3.5" stroke="#fff" stroke-opacity=".13" stroke-width=".5"/></pattern>
+    <filter id="contact" x="-50%" y="-25%" width="220%" height="180%"><feDropShadow dx="5" dy="7" stdDeviation="4" flood-color="#02070a" flood-opacity=".62"/></filter>
+    <g id="thumb-shape">
+      <!-- A bent thumb wraps over the case rim; its distal pad rests on the bezel. -->
+      <path d="M119 400Q117 384 128 371L145 345Q153 332 166 335Q180 338 181 352L179 373Q177 386 167 395L153 422Q147 434 137 430Q124 424 119 400Z" fill="url(#thumb)" stroke="#89978c" stroke-width="1"/>
+      <path d="M119 400Q117 384 128 371L145 345Q153 332 166 335Q180 338 181 352L179 373Q177 386 167 395L153 422Q147 434 137 430Q124 424 119 400Z" fill="url(#weave)"/>
+      <path d="M152 344q10-8 18 0 6 7 3 19l-4 14q-6 7-15 2l-10-8Z" fill="url(#pad)" stroke="#64766b" stroke-width=".8"/>
+      <path d="m152 351 17 6m-19 1 17 6m-19 1 16 6" stroke="#c0c9bb" stroke-opacity=".33" stroke-width="1" stroke-linecap="round"/>
+      <path d="M144 347q-10 18-17 33m27 15-14 26" stroke="#fffbea" stroke-opacity=".57" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M132 386q10 2 20 11m-25-3q11 0 21 10m-20 1 13 9" stroke="#52695c" stroke-opacity=".6" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M134 383q10 2 20 10m-25-2q11 0 21 10" stroke="#edf0df" stroke-opacity=".58" stroke-width="1.1" stroke-linecap="round"/>
+      <path d="M140 349q-3 14-12 27m33 23-12 27" stroke="#576d60" stroke-opacity=".48" stroke-width="1" stroke-dasharray="2 2"/>
+    </g>
+  </defs>
+  <g filter="url(#contact)"><use href="#thumb-shape"/></g>
+  <g transform="translate(900 0) scale(-1 1)" filter="url(#contact)"><use href="#thumb-shape"/></g>
+</svg>

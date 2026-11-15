@@ -1,0 +1,67 @@
+/* TABLET: NASA model-derived EVA artwork. All dimensions/lighting are visual game assumptions.
+   DOM and rendered texture: no WebGL draws, lights, frame callbacks or additional mission state. */
+.ares-wrist{position:fixed;inset:0;z-index:80;pointer-events:none;overflow:hidden;isolation:isolate;color:#183248;font:12px/1.45 "Courier New",monospace;text-align:left;--ares-orange:#f97316;--ares-line:#a6b9c8}
+.ares-wrist *{box-sizing:border-box}
+.ares-arm{position:absolute;width:900px;height:620px;left:calc(50% - 450px);bottom:-78px;transform-origin:50% 100%;transform:translateY(125%) rotate(14deg);opacity:0;visibility:hidden;transition:transform .55s cubic-bezier(.4,0,.7,.3),opacity .3s,visibility 0s .55s}
+.ares-wrist.is-raised .ares-arm{transform:translateY(0) rotate(-3deg);opacity:1;visibility:visible;transition:transform .76s cubic-bezier(.16,.86,.25,1),opacity .28s,visibility 0s}
+.ares-hold{position:relative;width:100%;height:100%;transform-origin:50% 80%;isolation:isolate}
+.is-raised .ares-hold{animation:ares-hold-breath 6.5s ease-in-out .8s infinite}
+@keyframes ares-hold-breath{0%,100%{transform:translateY(0) rotate(.08deg)}50%{transform:translateY(-3px) rotate(-.08deg)}}
+.ares-grip{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;user-select:none;object-fit:contain}
+.ares-grip-front{z-index:2;clip-path:polygon(evenodd,0 0,100% 0,100% 100%,0 100%,0 0,19.44% 15.16%,80.56% 15.16%,80.56% 70% ,19.44% 70%,19.44% 15.16%)}
+.ares-wrist[data-light=mars] .ares-grip{filter:sepia(.16) saturate(.83) brightness(.94)}
+.ares-case{position:absolute;z-index:1;left:150px;top:64px;width:600px;height:394px;padding:28px 23px 22px;border:2px solid #687276;border-radius:22px;background:linear-gradient(130deg,#758081 0,#424d53 3%,#242e35 19%,#333d43 62%,#1b252b 94%,#515e61);box-shadow:inset 0 2px 1px #e0e8df80,inset 2px 0 2px #afbab430,inset -2px -5px 2px #0a1319,0 3px 0 #121e25,0 9px 0 #131c22,0 11px 0 1px #465054,0 22px 26px #0008;pointer-events:none}
+.is-raised .ares-case{pointer-events:auto}
+.ares-wrist[data-light=mars] .ares-case{background:linear-gradient(130deg,#827e76,#484e50 5%,#2c3135 25%,#343b3d 70%,#20272b 95%,#5a605e)}
+.ares-case:before{content:"";position:absolute;inset:1px;border-radius:19px;pointer-events:none;background:repeating-linear-gradient(112deg,#d8e4dd05 0 1px,transparent 1px 4px);box-shadow:inset 0 0 0 5px #111a201f}
+.ares-screw{position:absolute;z-index:1;width:8px;height:8px;border:1px solid #a2acab80;border-radius:50%;background:linear-gradient(135deg,#a2aeaa 0,#677574 37%,#14232b 40% 57%,#899590 60%,#4c5b5b);box-shadow:0 0 0 4px #192329,0 0 0 5px #566265,0 2px 3px 5px #07101860}
+.ares-screw-tl{top:13px;left:13px}.ares-screw-tr{top:13px;right:13px}.ares-screw-bl{bottom:12px;left:13px}.ares-screw-br{bottom:12px;right:13px}
+.ares-hardware{position:absolute;top:9px;left:38px;right:38px;display:flex;align-items:center;gap:5px;height:10px;color:#b6c0b9;font-size:7px;letter-spacing:2px;text-shadow:0 1px 1px #000}
+.ares-hardware>span{flex:1}.ares-hardware>i{width:16px;height:2px;background:#121d23;box-shadow:0 1px 0 #73807b60}.ares-hardware>b{margin-left:8px;font-size:8px;color:#d5bd8a}
+.ares-screen{color-scheme:light;position:relative;height:100%;overflow:hidden;border:1px solid #6d889e;border-radius:7px;background:linear-gradient(145deg,#f8fbfe,#e6eef5);box-shadow:0 0 0 5px #0c161d,0 0 0 6px #67706a66,inset 1px 3px 9px #afc3d658;padding:12px 15px;display:flex;flex-direction:column}
+.ares-screen:before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:6px;background:linear-gradient(122deg,#e3eff008 0,#dfe8e905 25%,transparent 25.2%,transparent 75%,#dfe8e903 100%);box-shadow:inset 0 1px 0 #dde8dc20}
+.ares-screen:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#0002 0 1px,transparent 1px 4px);opacity:.04}
+.ares-wrist .ares-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:8px;margin:0;border-bottom:1px solid var(--ares-line);padding:0 0 5px}
+.ares-header>b{font-size:19px;letter-spacing:3px;color:#142c3f;text-shadow:0 0 12px #d4e1ed}
+.ares-header>b>span{font-size:10px;letter-spacing:1px;color:#245a82}
+.ares-header>b>i{display:inline-block;width:5px;height:5px;background:#86b785;box-shadow:0 0 5px #86b785;border-radius:50%;vertical-align:middle;margin-right:5px}
+.ares-wrist button{font:inherit;line-height:1.2;letter-spacing:.2px;min-width:0;box-shadow:none;cursor:pointer;pointer-events:auto;border-radius:2px}
+.ares-wrist .ares-close{color:#224e70;background:transparent;border:0;padding:5px;font-size:10px}
+ .ares-wrist button:focus-visible{outline:2px solid #285f8c;outline-offset:2px}
+.ares-location{display:flex;justify-content:space-between;gap:12px;font-size:9px;padding:6px 0;color:#526d82;white-space:nowrap}
+.ares-location>span{overflow:hidden;text-overflow:ellipsis}.ares-location>time{flex-shrink:0;color:#224e70;font-variant-numeric:tabular-nums}
+.ares-tabs{display:flex;gap:3px;border-bottom:1px solid var(--ares-line);padding-bottom:6px}
+.ares-wrist .ares-tabs>button{flex:1;background:#eaf2f8;border:1px solid #b6c9d7;color:#3c566b;padding:5px 2px;font-size:9px;white-space:nowrap}
+.ares-wrist .ares-tabs>button[aria-pressed=true]{color:#142c3f;background:#cae0f4;border-color:#729cbe;font-weight:bold}
+.ares-content{flex:1;min-height:0;padding:9px 0 8px;overflow:auto;scrollbar-width:thin;scrollbar-color:#88a8bf #e8f0f8}
+.ares-content dl{margin:7px 0 0}.ares-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid #bfcdd9;padding:4px 0;font-size:10px}
+.ares-row dt{color:#425d72;flex-shrink:0}.ares-row dd{margin:0;text-align:right;color:#142c3f;overflow-wrap:anywhere}
+.ares-status-grid,.ares-nav-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:8px}
+.ares-card{padding:9px 10px;border:1px solid var(--ares-line);background:#f7fbff;min-width:0}
+.ares-wrist .ares-card>small{display:block;color:#245a82;font:9px/1.4 "Courier New",monospace;letter-spacing:.5px}
+.ares-card>strong{display:block;font-size:19px;line-height:1.7;color:#142c3f;white-space:nowrap;letter-spacing:-.8px;text-shadow:0 0 10px #e4edf4;font-variant-numeric:tabular-nums}
+.ares-card>span{display:block;font-size:9px;line-height:1.4;color:#4c6579;overflow-wrap:anywhere}
+.ares-resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.ares-resource-grid .ares-card{padding:10px 8px}.ares-resource-grid .ares-card>strong{font-size:21px}
+.ares-wrist .ares-note{font-size:10px;line-height:1.6;color:#4c6579;margin:10px 0 0}
+.ares-crew>article{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px;border-bottom:1px solid var(--ares-line);background:#eff5fa}
+.ares-crew>article b{color:#142c3f;font-size:11px}.ares-crew>article span{display:block;color:#4b657b;font-size:10px}.ares-crew>article strong{color:#224e70;font-size:11px;text-align:right}
+.ares-wrist .ares-footer{display:flex;align-items:center;justify-content:space-between;gap:7px;flex-shrink:0;border-top:1px solid var(--ares-line);margin-top:5px;padding-top:6px;color:#4b6377;font-size:8px;letter-spacing:.1px}
+.ares-footer>b{color:#183248;white-space:nowrap}.ares-case-label{position:absolute;bottom:8px;left:36px;right:36px;display:flex;justify-content:space-between;font-size:8px;letter-spacing:2px;color:#8a9695}
+/* Scale the complete rig, never the glove layers independently. */
+@media(min-width:1800px) and (min-height:1100px){.ares-arm{scale:1.22;bottom:-90px}}
+@media(max-width:940px){.ares-arm{scale:.9;bottom:-85px}}
+@media(max-width:760px){.ares-arm{scale:.77;bottom:-90px}}
+@media(max-width:620px){.ares-arm{scale:.65;bottom:-85px}}
+@media(max-width:520px){.ares-arm{scale:.61;bottom:-75px}}
+@media(max-width:440px){.ares-arm{scale:.54;bottom:-65px}}
+@media(max-width:370px){.ares-arm{scale:.46;bottom:-55px}}
+@media(max-height:600px) and (min-width:761px){.ares-arm{scale:.78;bottom:-78px}}
+@media(prefers-reduced-motion:reduce){.ares-arm,.ares-wrist.is-raised .ares-arm{transition:opacity .12s}.is-raised .ares-hold{animation:none}}
+
+.ares-notice{display:none;color:#183248;font:13px/1.6 monospace;margin:12px 0;padding:10px;border:1px solid #86a5bf;background:#e7f0f7;overflow-wrap:anywhere}
+.has-notice .ares-notice{display:block}
+.ares-wrist.is-peeking:not(.is-raised) .ares-arm{transform:translateY(42%) rotate(-3deg) scale(.75);opacity:1;visibility:visible;transition:transform .65s cubic-bezier(.2,.8,.2,1),opacity .25s,visibility 0s}
+.is-peeking:not(.is-raised) .ares-content,.is-peeking:not(.is-raised) .ares-tabs,.is-peeking:not(.is-raised) .ares-footer,.is-peeking:not(.is-raised) .ares-close{visibility:hidden}
+.ares-colony-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:8px}.ares-colony-actions button{font:10px monospace;background:#ecf3f9;border:1px solid #9ab2c6;color:#213d53;padding:6px}
+.is-peeking .ares-colony-actions{visibility:hidden}
+@media(prefers-reduced-motion:reduce){.ares-wrist.is-peeking:not(.is-raised) .ares-arm{transition:opacity .12s}}

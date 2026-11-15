@@ -1,0 +1,3 @@
+import {it,expect} from 'vitest';
+import {createSoilAnalysis,startSoilAnalysis,stepSoilAnalysis} from '../src/sim/soilAnalysis.js';
+it('requires activation, completes after six seconds, and marks illustrative results',()=>{const idle=createSoilAnalysis();expect(stepSoilAnalysis(idle,10)).toBe(idle);const active=startSoilAnalysis(idle);expect(startSoilAnalysis(active)).toBe(active);expect(stepSoilAnalysis(active,5).phase).toBe('scanning');const done=stepSoilAnalysis(stepSoilAnalysis(active,2),4);expect(done.phase).toBe('complete');expect(done.result.illustrative).toBe(true);expect(done.result.perchlorateDetected).toBe(true);expect(startSoilAnalysis(done).result).toBeNull();expect(active.elapsed).toBe(0);expect(()=>stepSoilAnalysis(active,-1)).toThrow();});

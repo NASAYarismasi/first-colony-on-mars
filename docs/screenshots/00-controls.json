@@ -1,0 +1,182 @@
+{
+  "ready": true,
+  "titleScreen": true,
+  "watch": false,
+  "about": false,
+  "phase": "PRELAUNCH",
+  "camera": "Takip",
+  "cameraIndex": 0,
+  "paused": false,
+  "manualThrottle": false,
+  "help": true,
+  "muted": false,
+  "quality": "Orta",
+  "warp": 1,
+  "countdown": {
+    "time": -10,
+    "running": false,
+    "complete": false,
+    "events": []
+  },
+  "telemetry": {
+    "time": 0,
+    "altitude": 0,
+    "downrange": 0,
+    "velocity": 408.24592276614277,
+    "surfaceVelocity": 0,
+    "verticalSpeed": 0,
+    "acceleration": 0,
+    "mach": 0,
+    "dynamicPressure": 0,
+    "pressure": 101325,
+    "density": 1.225000018124288,
+    "thrust": 0,
+    "throttle": 1,
+    "stage": "core",
+    "mass": 2589143,
+    "pitch": 1.5707963267948966,
+    "propellant": {
+      "srb": 1252000,
+      "core": 987000,
+      "icps": 29048
+    },
+    "flightPathAngle": 0,
+    "apoapsis": -1.210719347000122e-8,
+    "periapsis": -6369620.853676638,
+    "maxQ": {
+      "time": 0,
+      "value": 0
+    },
+    "maxAcceleration": 0,
+    "engineFiring": false,
+    "inAtmosphere": true,
+    "status": "READY",
+    "phase": "PRELAUNCH",
+    "missionTime": 0,
+    "phaseTime": 0,
+    "crew": [
+      {
+        "id": "astronaut-1",
+        "health": 100
+      },
+      {
+        "id": "astronaut-2",
+        "health": 100
+      },
+      {
+        "id": "astronaut-3",
+        "health": 100
+      }
+    ],
+    "supplies": {
+      "oxygen": 806.4,
+      "water": 3379.2,
+      "food": 595.2
+    },
+    "warp": 1,
+    "cabinPower": true,
+    "failureReason": null,
+    "transitPropellant": 120000,
+    "burnRemaining": 0,
+    "burnDelivered": 0,
+    "cruiseProgress": 0,
+    "heliocentric": {
+      "ship": [
+        149597870700,
+        0
+      ],
+      "earth": [
+        149597870700,
+        0
+      ],
+      "mars": [
+        163011604294.61148,
+        159321893309.68448
+      ],
+      "speed": 32729.381087821166,
+      "time": 0
+    },
+    "landingPayload": null,
+    "mars": false,
+    "radius": 6378137,
+    "rotation": 0,
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "velocityVector": [
+      408.24592276614277,
+      0,
+      0
+    ],
+    "theta": 0,
+    "attitude": 0,
+    "polar": [
+      6378137,
+      0,
+      0,
+      408.24592276614277
+    ],
+    "orbit": {
+      "a": 3193326.573161681,
+      "e": 0.9973331426873355,
+      "inclination": 0,
+      "raan": 0,
+      "argumentOfPeriapsis": 3.141592653589793,
+      "trueAnomaly": 3.141592653589793,
+      "periapsis": 8516.146323361992,
+      "apoapsis": 6378136.999999988,
+      "energy": -62411474.78463965
+    },
+    "stages": [
+      {
+        "id": "srb",
+        "propellant": 1252000,
+        "attached": true
+      },
+      {
+        "id": "core",
+        "propellant": 987000,
+        "attached": true
+      },
+      {
+        "id": "icps",
+        "propellant": 29048,
+        "attached": true
+      }
+    ],
+    "lasAttached": true,
+    "countdown": {
+      "time": -10,
+      "running": false,
+      "complete": false,
+      "events": []
+    },
+    "events": [],
+    "debris": [],
+    "transfer": {
+      "a": 188768502365.15265,
+      "e": 0.2075061844236133,
+      "duration": 22366001.57049873,
+      "phaseAngle": 0.7739517891620693,
+      "earthVInfinity": 2944.689256124362,
+      "marsVInfinity": 2648.8952289859953,
+      "departureDeltaV": 3614.636212587584,
+      "captureDeltaV": 2096.9806961272147
+    },
+    "commandedThrottle": 1,
+    "trajectory": [],
+    "exhaust": []
+  },
+  "renderedMissionTime": 0,
+  "backlogSeconds": 0,
+  "performance": {
+    "fps": 9,
+    "drawCalls": 56,
+    "triangles": 226628,
+    "geometries": 25,
+    "textures": 24
+  },
+  "coordinates": "SI metres; Y-up; floating origin at vehicle, radial tangent basis; maps use scaled distances"
+}

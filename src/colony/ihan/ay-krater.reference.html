@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mars Kolonisi · İlk Gece</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#07080a;
+  color:#f0f2f5;
+  font:15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+main{
+  max-width:1560px;
+  margin:auto;
+  padding:24px clamp(14px,2.5vw,40px);
+}
+header{
+  margin-bottom:20px;
+  border-bottom:1px solid #232733;
+  padding-bottom:14px;
+}
+h1{
+  font-size:clamp(26px,3.4vw,42px);
+  line-height:1.15;
+  margin:0 0 8px;
+  color:#ffffff;
+  letter-spacing:-0.02em;
+}
+.subtitle{
+  color:#9da5b4;
+  margin:0;
+  font-size:15px;
+}
+.badge{
+  display:inline-block;
+  padding:2px 8px;
+  border-radius:4px;
+  background:#1a2b48;
+  color:#70b0ff;
+  font-size:12px;
+  font-weight:600;
+  margin-left:8px;
+  vertical-align:middle;
+}
+.layout{
+  display:grid;
+  grid-template-columns:minmax(0,2.5fr) minmax(320px,1fr);
+  gap:20px;
+  margin:20px 0;
+}
+.panel{
+  border:1px solid #252a38;
+  background:#10131a;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,0.5);
+}
+.pad{
+  padding:18px 20px;
+}
+#viewport{
+  height:clamp(420px,68vh,780px);
+  position:relative;
+  background:#000003;
+}
+canvas{
+  display:block;
+  width:100%;
+  height:100%;
+  touch-action:none;
+}
+.hud-bar{
+  position:absolute;
+  top:14px;
+  right:14px;
+  background:rgba(12,16,24,0.85);
+  border:1px solid #323b52;
+  color:#6fe3ff;
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+  font-size:12px;
+  padding:6px 12px;
+  border-radius:6px;
+  pointer-events:none;
+  backdrop-filter:blur(4px);
+}
+#scene-status{
+  position:absolute;
+  left:14px;
+  top:14px;
+  background:rgba(12,16,24,0.9);
+  border:1px solid #4a5568;
+  color:#e2e8f0;
+  padding:6px 12px;
+  border-radius:6px;
+  font-size:13px;
+}
+#scene-status:empty{
+  display:none;
+}
+.bar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:14px;
+  background:#141822;
+  border-top:1px solid #232836;
+}
+button{
+  background:#1c2230;
+  color:#e2e8f0;
+  border:1px solid #364157;
+  padding:8px 14px;
+  border-radius:6px;
+  cursor:pointer;
+  font:inherit;
+  font-size:13.5px;
+  font-weight:500;
+  transition:all 0.15s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+button:hover{
+  background:#283247;
+  border-color:#536485;
+  color:#ffffff;
+}
+button[aria-pressed=true]{
+  background:#26518a;
+  border-color:#518cdb;
+  color:#ffffff;
+  box-shadow:0 0 8px rgba(81,140,219,0.35);
+}
+#fps-toggle{
+  background:#233526;
+  border-color:#3e6344;
+  color:#c7f3cc;
+}
+#fps-toggle:hover{
+  background:#2f4a33;
+}
+#fps-toggle[aria-pressed=true]{
+  background:#1e6a32;
+  border-color:#48b864;
+  color:#ffffff;
+}
+#theme-toggle{
+  margin-left:auto;
+  background:#2c2820;
+  border-color:#594f38;
+  color:#ffe8a8;
+}
+#theme-toggle:hover{
+  background:#3d3629;
+}
+.instruction-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  padding:10px 16px;
+  background:#0c0e14;
+  border-top:1px solid #1a1e2a;
+}
+#camera-help{
+  color:#8e97a8;
+  font-size:12.5px;
+}
+.ref-note{
+  color:#6aa3e8;
+  font-size:12px;
+}
+h2{
+  font-size:19px;
+  margin:0 0 14px;
+  color:#ffffff;
+  border-bottom:1px solid #232733;
+  padding-bottom:8px;
+}
+h3{
+  font-size:15px;
+  margin:16px 0 6px;
+  color:#c9d1df;
+}
+p{
+  margin:8px 0;
+  color:#b4bccb;
+  font-size:14px;
+}
+label{
+  display:block;
+  margin:14px 0 6px;
+  color:#c9d1df;
+  font-size:13.5px;
+  font-weight:500;
+}
+.label-val{
+  float:right;
+  color:#60a5fa;
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+  font-weight:600;
+}
+input[type=range]{
+  width:100%;
+  accent-color:#3b82f6;
+  margin-top:6px;
+}
+.check-label{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:14px 0;
+  cursor:pointer;
+}
+.check-label input{
+  width:16px;
+  height:16px;
+  accent-color:#3b82f6;
+}
+.metric-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin:18px 0;
+}
+.metric-box{
+  background:#161b26;
+  border:1px solid #283042;
+  border-radius:8px;
+  padding:12px;
+}
+.metric-title{
+  color:#8e97a8;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+  margin-bottom:4px;
+}
+.metric-val{
+  display:block;
+  color:#60a5fa;
+  font-size:22px;
+  font-weight:700;
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+}
+.metric-saved{
+  color:#34d399 !important;
+}
+.sci-card{
+  background:#131722;
+  border:1px solid #22293b;
+  border-radius:8px;
+  padding:12px 14px;
+  margin-bottom:10px;
+}
+.sci-card strong{
+  color:#e2e8f0;
+}
+footer{
+  margin:25px 0 10px;
+  padding-top:14px;
+  border-top:1px solid #1c202c;
+  color:#737c8e;
+  font-size:12.5px;
+}
+footer a{
+  color:#85b7ff;
+  text-decoration:none;
+}
+footer a:hover{
+  text-decoration:underline;
+}
+@media(max-width:960px){
+  .layout{
+    grid-template-columns:1fr;
+  }
+  #theme-toggle{
+    margin-left:0;
+  }
+}
+
+.layout { grid-template-columns:minmax(0,1fr); }
+#viewport { height:clamp(340px,68vh,880px); }
+#viewport:fullscreen { width:100vw; height:100vh; }
+#viewport:fullscreen .hud-bar { display:none; }
+#hud-telemetry { font-size:12px; background:#1e1916a8; color:#f1e5db; }
+body { background:#11100f; }
+#first-night dl {display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;max-width:38rem}
+#first-night dd {text-align:right;margin:0;color:#9bdcbb}
+#first-night label {display:inline-block;margin:.4rem .6rem .4rem 0}
+#first-night select {font:inherit;padding:.35rem;background:#28211e;color:#fff}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Mars Kolonisi</h1>
+  <p class="subtitle">Basınçlı habitat · FPS keşif · Yaşam desteği ve güneş enerjisi simülasyonu</p>
+</header>
+
+<div class="layout">
+  <!-- 3D Viewport Panel -->
+  <section class="panel" aria-label="3B Mars Ovası ve Üs Görünümü">
+    <div id="viewport">
+      <canvas id="scene" tabindex="0" aria-describedby="camera-help" aria-label="3B Mars Ovası ve Yaşam Destek Üssü"></canvas>
+      <div id="hud-telemetry" class="hud-bar">Yükseklik: Hesaplanıyor...</div>
+      <small id="scene-status" role="status">Mars ovası yükleniyor…</small>
+    </div>
+    
+    <div class="bar" id="views"><button data-view="air" aria-pressed="false">Hava tesisi</button><button data-view="water" aria-pressed="false">Buz sondası</button><button id="scene-fullscreen" type="button">Tam ekran</button>
+      <button data-view="panorama" aria-pressed="true">📸 Mars Panoraması</button>
+      <button data-view="base" aria-pressed="false">Habitat</button>
+      <button data-view="solar" type="button" aria-pressed="false">Güneş tarlası</button>
+      <button id="fps-toggle" aria-pressed="false" disabled>🚶 Astronotun Gözünden Gez (FPS)</button><button id="habitat-entry" type="button">Hava kilidinden gir</button>
+      <button id="theme-toggle">Ortam: 🪐 Mars</button>
+    </div>
+
+    <div class="instruction-row"><small id="airlock-feedback" aria-live="polite"></small>
+      <small id="camera-help">Fareyle sürükleyerek bak, tekerlekle yaklaş. FPS modunda WASD ile yürü, Boşluk ile zıpla ve herhangi bir kubbenin hava kilidine yaklaşınca E’ye bas.</small>
+
+    </div>
+  </section>
+
+  <section class="panel pad" id="first-night">
+    <h2>Koloninin ilk gecesi</h2><p>Buz sondası, üsten yaklaşık 69 m uzakta varsayımsal buzlu regolit sahasında. Hava kilidi basınç geçişleri sunum için hızlandırılmıştır.</p>
+    <label>İniş sonucu (.json) <input type="file" accept=".json,application/json"></label>
+    <button id="night-example" type="button">Örnek inişi yükle</button>
+    <p role="status"></p>
+    <form>
+      <label>Güneş koşulu
+        <select name="sunlight"><option value=".2">Örnek toz fırtınası</option><option value="1">Açık hava</option></select>
+      </label>
+      <label>Gece önceliği
+        <select name="priority"><option value="air">Oksijen üretimi · Buz çıkarmayı ertele</option><option value="water">Buzdan su çıkarma · Hava dolaşımı ve CO₂ temizliği öncelikli</option></select>
+      </label>
+      <button type="submit">Geceyi hesapla</button>
+    </form>
+    <output aria-live="polite"></output>
+    <details><summary>Senaryo varsayımları</summary>
+      <p>İniş verisindeki 1 su birimi 1 L, 1 oksijen birimi 1 kg, 1 enerji birimi 1 kWh olarak yorumlanır. Kabin depoları 100 L su ve 15 kg oksijenle sınırlıdır. Fazla kargo bu gece hesabına girmez.</p>
+      <p>Gündüz yükü 60 kWh, kullanılabilir batarya 180 kWh, gece 12,33 saat. Önce 1 kW asgari habitat yükü, ardından hava ve su tesisleri beslenir. Sabah raporu senaryonun tüketim ve üretimini gösterir. CO₂ değeri kütledir. Kabin basıncı ve güvenlik eşikleri hesaplanmaz.</p>
+    </details>
+  </section>
+  <!-- NASA Life Support ECLSS Panel -->
+  <section class="panel pad" aria-label="NASA Yaşam Destek Dengesi">
+    <h2>NASA ECLSS Yaşam Destek Dengesi</h2>
+    <p>3 kişilik keşif ekibi için kapalı döngü madde ve enerji dengesi (arcade/oyun mekaniği içermeyen bilimsel simülasyon).</p>
+
+    <label for="days">
+      Görev Süresi
+      <output id="days-value" class="label-val">10 Dünya günü</output>
+      <input id="days" type="range" min="1" max="30" value="10">
+    </label>
+
+    <label for="recovery">
+      ECLSS Su Geri Kazanım Verimi
+      <output id="recovery-value" class="label-val">%85</output>
+      <input id="recovery" type="range" min="0" max="98" value="85">
+    </label>
+
+    <label class="check-label">
+      <input id="electrolysis" type="checkbox" checked>
+      <span>Oksijeni sudan üret (Su Elektrolizi & Sabatier)</span>
+    </label>
+
+    <div class="metric-grid">
+      <div class="metric-box">
+        <div class="metric-title">Dışarıdan Su İhtiyacı</div>
+        <span id="water" class="metric-val">-</span>
+      </div>
+      <div class="metric-box">
+        <div class="metric-title">Geri Kazanılan Su</div>
+        <span id="saved-water" class="metric-val metric-saved">-</span>
+      </div>
+      <div class="metric-box">
+        <div class="metric-title">Depodan Net Oksijen</div>
+        <span id="oxygen" class="metric-val">-</span>
+      </div>
+      <div class="metric-box">
+        <div class="metric-title">Mürettebat Gıda Enerjisi</div>
+        <span id="food" class="metric-val">-</span>
+      </div>
+    </div>
+
+    <div class="sci-card">
+      <strong>💧 Su Döngüsü (ECLSS / WRS):</strong> Kabin nem yoğuşması ve gri su arıtılarak kapalı döngüde %85–98 oranında yeniden kullanılır.
+    </div>
+    <div class="sci-card">
+      <strong>💨 Oksijen ve Karbondioksit:</strong> CDRA ünitesi CO₂'yi filtreler; elektroliz ünitesi temiz suyu hidrojen ve solunabilir oksijene ayrıştırır.
+    </div>
+    <div class="sci-card">
+      <strong>🌱 Hidroponik Sera:</strong> Kubbe içindeki dikey LED raflarında taze yeşillik ve fotosentetik oksijen desteği sağlanır.
+    </div>
+  </section>
+</div>
+
+<!-- Detailed Systems & Science Section -->
+<section class="panel pad">
+  <h2>Mars Ovası ve Üs Mimarisi</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:10px;">
+    <div class="sci-card">
+      <strong>Mars Atmosferi & Tozlu Ufuk:</strong>
+      <p>Mars'ın ince karbondioksit atmosferi ve havada asılı toz, gökyüzünü kayısı-somon tonlarına boyar. Toz saçılması sert gölgeleri yumuşatır ve uzak sırtları boğuk bir ufuk çizgisine karıştırır.</p>
+    </div>
+    <div class="sci-card">
+      <strong>Modüler Keşif Üssü:</strong>
+      <p>Düz ovada birbirine tünellerle bağlanan basınçlı habitatlar, güneş tarlası, haberleşme direği ve yüzey keşif aracı yer alır.</p>
+    </div>
+  </div>
+</section>
+
+<footer><p>Taş biçimleri: <a href="https://mars.nasa.gov/mars2020/multimedia/raw-images/ZL0_0461_0707874698_410EBY_N0260630ZCAM07114_1100LMJ">Perseverance Mastcam-Z · Sol 461</a> · <a href="https://mars.nasa.gov/mars2020/multimedia/raw-images/image-of-the-week/week-166">Mastcam-Z · Sol 1123</a></p>
+<p>Zemin fotoğrafı NASA/JPL-Caltech/ASU/MSSS (Perseverance Mastcam-Z, Sol 693). <a href="https://science.nasa.gov/photojournal/perseverances-portrait-of-the-sample-depot/">Three Forks panoraması</a> · <a href="https://science.nasa.gov/photojournal/mastcam-zs-first-360-degree-panorama/">Jezero panoraması</a> · <a href="https://science.nasa.gov/photojournal/two-sizes-of-ripples-on-surface-of-martian-sand-dune/">Curiosity zemin referansı</a></p>
+  NASA Yaşam Destek Sistemi referansları: 
+  <a href="https://www.nasa.gov/reference/environmental-control-and-life-support-systems-eclss/" target="_blank" rel="noopener">NASA ECLSS Overview</a> · 
+  <a href="https://ntrs.nasa.gov/citations/20160005782" target="_blank" rel="noopener">NASA Baseline Values and Assumptions Document (BVAD)</a> · 
+  <a href="https://pds.nasa.gov/" target="_blank" rel="noopener">NASA Planetary Data System (LRO / HiRISE)</a>
+<p>Kubbe yerleşimi bir mühendislik konseptidir. Temeller araziye göre ayarlanır. Basınç kabuğu, dış koruma ve hava kilidi tasarım ilkeleri <a href="https://ntrs.nasa.gov/citations/20250003364">NASA HabSim</a> çalışmasına dayanır. Malzeme kalınlığı ve taşıyıcı kesitleri boyutlandırılmamıştır.</p><p>İç donanım: Orion’dan uyku tulumu, su dağıtıcısı ve yemek ısıtıcısı. ISS’den su geri kazanımı ve kabin hava arıtma rafları. <a href="https://www.nasa.gov/reference/crew-systems/">NASA Orion</a> · <a href="https://www.nasa.gov/reference/environmental-control-and-life-support-systems-eclss/">NASA ISS</a></p><p>Sahne ışığı ve toz sisi temsili. Kamera ve yürüme hızı sunum için ayarlandı. <a href="https://science.nasa.gov/3d-resources/mars-2020-perseverance-rover/">NASA/JPL Perseverance</a> · <a href="https://science.nasa.gov/3d-resources/astronaut/">NASA astronot modeli</a></p></footer>
+<section class="panel pad" aria-label="Güneş tarlası enerji hesabı">
+  <h2>Güneş tarlası</h2>
+  <p>42 masa · 420 panel · 840 m² etkin panel yüzeyi</p>
+  <div class="bar">
+    <button data-solar-weather="1" type="button" aria-pressed="true">Açık hava</button>
+    <button data-solar-weather="0.2" type="button" aria-pressed="false">Örnek toz fırtınası</button>
+  </div>
+  <p aria-live="polite">Üretim <strong id="solar-generated">420 kWh/sol</strong> · 413 kWh/sol bütçeye göre fark <strong id="solar-balance">+7 kWh/sol</strong></p>
+  <p>Batarya 250 kWh nominal, 180 kWh kullanılabilir. Dolu bataryadan 132 kWh gece tüketimi sonrası 48 kWh kalır.</p>
+  <details><summary>Hesap varsayımları</summary>
+    <p>Üretim = 840 m² × 2,5 kWh/m²/sol × %25 panel verimi × %80 sistem verimi. Örnek fırtınada ışınım %80 azalır. Sayılar senaryo varsayımıdır.</p>
+  </details>
+</section>
+</main>
+
+</body>
+</html>

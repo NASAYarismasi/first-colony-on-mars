@@ -1,0 +1,1079 @@
+{
+  "ready": true,
+  "titleScreen": false,
+  "watch": false,
+  "about": false,
+  "phase": "ASCENT",
+  "camera": "Yer takibi",
+  "cameraIndex": 2,
+  "paused": false,
+  "manualThrottle": false,
+  "help": false,
+  "muted": false,
+  "quality": "Orta",
+  "warp": 1,
+  "countdown": {
+    "time": 0,
+    "running": false,
+    "complete": true,
+    "events": [
+      {
+        "type": "RS25_START",
+        "time": -6.5
+      },
+      {
+        "type": "SRB_IGNITION",
+        "time": 0
+      }
+    ]
+  },
+  "telemetry": {
+    "time": 7.999999999999917,
+    "altitude": 122.21160849649459,
+    "downrange": -0.04032455075034376,
+    "velocity": 409.53906121478235,
+    "surfaceVelocity": 32.61738097852941,
+    "verticalSpeed": 32.617377228170305,
+    "acceleration": 14.642113874043337,
+    "mach": 0.09598298656951118,
+    "dynamicPressure": 644.0237799861405,
+    "pressure": 99865.46884883138,
+    "density": 1.2106921503384098,
+    "thrust": 36312844.40742693,
+    "throttle": 1,
+    "stage": "core",
+    "mass": 2479409.303885473,
+    "pitch": 1.5707963267948966,
+    "propellant": {
+      "srb": 1158848.482636158,
+      "core": 970417.821249315,
+      "icps": 29048
+    },
+    "flightPathAngle": 0.07972855860537749,
+    "apoapsis": 176.64909418206662,
+    "periapsis": -6369620.853855595,
+    "maxQ": {
+      "time": 7.999999999999917,
+      "value": 644.0237799861405
+    },
+    "maxAcceleration": 14.642113874043337,
+    "engineFiring": true,
+    "inAtmosphere": true,
+    "status": "FLYING",
+    "phase": "ASCENT",
+    "missionTime": 7.999999999999917,
+    "phaseTime": 7.999999999999917,
+    "crew": [
+      {
+        "id": "astronaut-1",
+        "health": 100
+      },
+      {
+        "id": "astronaut-2",
+        "health": 100
+      },
+      {
+        "id": "astronaut-3",
+        "health": 100
+      }
+    ],
+    "supplies": {
+      "oxygen": 806.3997666666786,
+      "water": 3379.199022222255,
+      "food": 595.199827777765
+    },
+    "warp": 1,
+    "cabinPower": true,
+    "failureReason": null,
+    "transitPropellant": 120000,
+    "burnRemaining": 0,
+    "burnDelivered": 0,
+    "cruiseProgress": 0,
+    "heliocentric": {
+      "ship": [
+        149597870700,
+        0
+      ],
+      "earth": [
+        149597870700,
+        0
+      ],
+      "mars": [
+        163011604294.61148,
+        159321893309.68448
+      ],
+      "speed": 32729.381087821166,
+      "time": 0
+    },
+    "landingPayload": null,
+    "mars": false,
+    "radius": 6378137,
+    "rotation": 0.000583369271999994,
+    "position": [
+      -0.04032532340985375,
+      122.21160849649459,
+      0
+    ],
+    "velocityVector": [
+      408.23810355608543,
+      32.6173798091776,
+      0
+    ],
+    "theta": -6.322308653819095e-9,
+    "attitude": 6.3223086765873404e-9,
+    "polar": [
+      6378259.2116084965,
+      0.0005120503146260982,
+      32.617377228170305,
+      408.23810376230256
+    ],
+    "orbit": {
+      "a": 3193414.8976193597,
+      "e": 0.99733321650414,
+      "inclination": 0,
+      "raan": 0,
+      "argumentOfPeriapsis": 3.1423183459282313,
+      "trueAnomaly": 3.141379011566618,
+      "periapsis": 8516.146144404664,
+      "apoapsis": 6378313.649094182,
+      "energy": -62409748.58875217
+    },
+    "stages": [
+      {
+        "id": "srb",
+        "propellant": 1158848.482636158,
+        "attached": true
+      },
+      {
+        "id": "core",
+        "propellant": 970417.821249315,
+        "attached": true
+      },
+      {
+        "id": "icps",
+        "propellant": 29048,
+        "attached": true
+      }
+    ],
+    "lasAttached": true,
+    "countdown": {
+      "time": 0,
+      "running": false,
+      "complete": true,
+      "events": [
+        {
+          "type": "RS25_START",
+          "time": -6.5
+        },
+        {
+          "type": "SRB_IGNITION",
+          "time": 0
+        }
+      ]
+    },
+    "events": [
+      {
+        "type": "RS25_START",
+        "time": -6.5
+      },
+      {
+        "type": "SRB_IGNITION",
+        "time": 0
+      },
+      {
+        "type": "LIFTOFF",
+        "time": 0
+      },
+      {
+        "type": "ASCENT",
+        "time": 0
+      }
+    ],
+    "debris": [],
+    "transfer": {
+      "a": 188768502365.15265,
+      "e": 0.2075061844236133,
+      "duration": 22366001.57049873,
+      "phaseAngle": 0.7739517891620693,
+      "earthVInfinity": 2944.689256124362,
+      "marsVInfinity": 2648.8952289859953,
+      "departureDeltaV": 3614.636212587584,
+      "captureDeltaV": 2096.9806961272147
+    },
+    "commandedThrottle": 1,
+    "trajectory": [
+      [
+        6378137,
+        0,
+        0
+      ],
+      [
+        6378143.832294151,
+        816.4921422819247,
+        2.0000000000000013
+      ],
+      [
+        6378165.316334825,
+        1632.9861921866204,
+        4.000000000000003
+      ],
+      [
+        6378203.435722724,
+        2457.649428396234,
+        6.01999999999996
+      ]
+    ],
+    "exhaust": [
+      {
+        "time": -6.480000000000075,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -6.26000000000008,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -6.040000000000084,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -5.820000000000089,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -5.600000000000094,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -5.3800000000000985,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -5.160000000000103,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -4.940000000000108,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -4.7200000000001125,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -4.500000000000117,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -4.280000000000122,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -4.060000000000127,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -3.8400000000001278,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -3.6400000000001276,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -3.4400000000001274,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -3.2400000000001272,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -3.040000000000127,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -2.840000000000127,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -2.6400000000001267,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -2.4400000000001265,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -2.2400000000001263,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -2.040000000000126,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -1.840000000000126,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -1.6400000000001258,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -1.4400000000001256,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -1.2400000000001254,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -1.0400000000001253,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -0.8400000000001251,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -0.6400000000001249,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -0.44000000000012474,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -0.24000000000012459,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": -0.020000000000124616,
+        "phase": "PRELAUNCH",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "theta": 0,
+        "attitude": 0,
+        "altitude": 0
+      },
+      {
+        "time": 0.18,
+        "phase": "ASCENT",
+        "position": [
+          -4.1423963552637246e-7,
+          0.05397538188844919,
+          0
+        ],
+        "theta": -6.494680688433688e-14,
+        "attitude": 6.483702463810914e-14,
+        "altitude": 0.05397538188844919
+      },
+      {
+        "time": 0.38000000000000006,
+        "phase": "ASCENT",
+        "position": [
+          -0.000003908069204474253,
+          0.24142739083617926,
+          0
+        ],
+        "theta": -6.127289295517965e-13,
+        "attitude": 6.126210649881614e-13,
+        "altitude": 0.24142739083617926
+      },
+      {
+        "time": 0.5800000000000002,
+        "phase": "ASCENT",
+        "position": [
+          -0.000013933849141950099,
+          0.5644700992852449,
+          0
+        ],
+        "theta": -2.184626625109133e-12,
+        "attitude": 2.184696867857383e-12,
+        "altitude": 0.5644700992852449
+      },
+      {
+        "time": 0.7800000000000004,
+        "phase": "ASCENT",
+        "position": [
+          -0.00003398168737182292,
+          1.024558523669839,
+          0
+        ],
+        "theta": -5.327838193682714e-12,
+        "attitude": 5.327738250571201e-12,
+        "altitude": 1.024558523669839
+      },
+      {
+        "time": 0.9800000000000005,
+        "phase": "ASCENT",
+        "position": [
+          -0.0000675789940513233,
+          1.623152606189251,
+          0
+        ],
+        "theta": -1.0595410047378392e-11,
+        "attitude": 1.0595302413207719e-11,
+        "altitude": 1.623152606189251
+      },
+      {
+        "time": 1.1800000000000006,
+        "phase": "ASCENT",
+        "position": [
+          -0.00011829060282758217,
+          2.361717247404158,
+          0
+        ],
+        "theta": -1.8546255595728103e-11,
+        "attitude": 1.854627562636324e-11,
+        "altitude": 2.361717247404158
+      },
+      {
+        "time": 1.3800000000000008,
+        "phase": "ASCENT",
+        "position": [
+          -0.00018971889311689897,
+          3.241722345352173,
+          0
+        ],
+        "theta": -2.9745174286990514e-11,
+        "attitude": 2.9745095275757194e-11,
+        "altitude": 3.241722345352173
+      },
+      {
+        "time": 1.580000000000001,
+        "phase": "ASCENT",
+        "position": [
+          -0.0002855039132343163,
+          4.264642825350165,
+          0
+        ],
+        "theta": -4.476287077820069e-11,
+        "attitude": 4.476286008525676e-11,
+        "altitude": 4.264642825350165
+      },
+      {
+        "time": 1.7800000000000011,
+        "phase": "ASCENT",
+        "position": [
+          -0.0004093235039849835,
+          5.431958682835102,
+          0
+        ],
+        "theta": -6.417597417298238e-11,
+        "attitude": 6.417599784924732e-11,
+        "altitude": 5.431958682835102
+      },
+      {
+        "time": 1.9800000000000013,
+        "phase": "ASCENT",
+        "position": [
+          -0.0005648934225881141,
+          6.745155003853142,
+          0
+        ],
+        "theta": -8.856705730679419e-11,
+        "attitude": 8.856715361105216e-11,
+        "altitude": 6.745155003853142
+      },
+      {
+        "time": 2.1800000000000015,
+        "phase": "ASCENT",
+        "position": [
+          -0.0007559674679280726,
+          8.205722019076347,
+          0
+        ],
+        "theta": -1.185246562354636e-10,
+        "attitude": 1.185247455737226e-10,
+        "altitude": 8.205722019076347
+      },
+      {
+        "time": 2.3800000000000017,
+        "phase": "ASCENT",
+        "position": [
+          -0.0009863376067873022,
+          9.815155122429132,
+          0
+        ],
+        "theta": -1.5464328987279882e-10,
+        "attitude": 1.5464318714464298e-10,
+        "altitude": 9.815155122429132
+      },
+      {
+        "time": 2.580000000000002,
+        "phase": "ASCENT",
+        "position": [
+          -0.001259834099851425,
+          11.574954918585718,
+          0
+        ],
+        "theta": -1.9752347958754309e-10,
+        "attitude": 1.9752355306934533e-10,
+        "altitude": 11.574954918585718
+      },
+      {
+        "time": 2.780000000000002,
+        "phase": "ASCENT",
+        "position": [
+          -0.001580325627832752,
+          13.48662724904716,
+          0
+        ],
+        "theta": -2.477717688138814e-10,
+        "attitude": 2.4777180307467006e-10,
+        "altitude": 13.48662724904716
+      },
+      {
+        "time": 2.980000000000002,
+        "phase": "ASCENT",
+        "position": [
+          -0.0019517194208245486,
+          15.551683236844838,
+          0
+        ],
+        "theta": -3.060007431633909e-10,
+        "attitude": 3.0600078027021027e-10,
+        "altitude": 15.551683236844838
+      },
+      {
+        "time": 3.1800000000000024,
+        "phase": "ASCENT",
+        "position": [
+          -0.0023779613863052244,
+          17.771639317274094,
+          0
+        ],
+        "theta": -3.728290503201507e-10,
+        "attitude": 3.728291009252871e-10,
+        "altitude": 17.771639317274094
+      },
+      {
+        "time": 3.3800000000000026,
+        "phase": "ASCENT",
+        "position": [
+          -0.002863036237348877,
+          20.14801727514714,
+          0
+        ],
+        "theta": -4.488814199629567e-10,
+        "attitude": 4.4888137651355464e-10,
+        "altitude": 20.14801727514714
+      },
+      {
+        "time": 3.5800000000000027,
+        "phase": "ASCENT",
+        "position": [
+          -0.0034109676241545423,
+          22.682344281114638,
+          0
+        ],
+        "theta": -5.347886842025328e-10,
+        "attitude": 5.347886578022099e-10,
+        "altitude": 22.682344281114638
+      },
+      {
+        "time": 3.780000000000003,
+        "phase": "ASCENT",
+        "position": [
+          -0.004025818263362505,
+          25.3761529289186,
+          0
+        ],
+        "theta": -6.311877976663757e-10,
+        "attitude": 6.311877687181777e-10,
+        "altitude": 25.3761529289186
+      },
+      {
+        "time": 3.980000000000003,
+        "phase": "ASCENT",
+        "position": [
+          -0.0047116900693073074,
+          28.230981271713972,
+          0
+        ],
+        "theta": -7.387218578817564e-10,
+        "attitude": 7.387217504373211e-10,
+        "altitude": 28.230981271713972
+      },
+      {
+        "time": 4.199999999999998,
+        "phase": "ASCENT",
+        "position": [
+          -0.005553122254518891,
+          31.559112592600286,
+          0
+        ],
+        "theta": -8.706452648676172e-10,
+        "attitude": 8.706453336060349e-10,
+        "altitude": 31.559112592600286
+      },
+      {
+        "time": 4.419999999999994,
+        "phase": "ASCENT",
+        "position": [
+          -0.006491068951378749,
+          35.08600776270032,
+          0
+        ],
+        "theta": -1.017700504760393e-9,
+        "attitude": 1.0177005904665748e-9,
+        "altitude": 35.08600776270032
+      },
+      {
+        "time": 4.639999999999989,
+        "phase": "ASCENT",
+        "position": [
+          -0.0075311553096811,
+          38.81373714841902,
+          0
+        ],
+        "theta": -1.1807694754134394e-9,
+        "attitude": 1.180769482189703e-9,
+        "altitude": 38.81373714841902
+      },
+      {
+        "time": 4.859999999999984,
+        "phase": "ASCENT",
+        "position": [
+          -0.00867906468876593,
+          42.744379337877035,
+          0
+        ],
+        "theta": -1.3607431958019382e-9,
+        "attitude": 1.3607432958195886e-9,
+        "altitude": 42.744379337877035
+      },
+      {
+        "time": 5.07999999999998,
+        "phase": "ASCENT",
+        "position": [
+          -0.009940538872480439,
+          46.880021206103265,
+          0
+        ],
+        "theta": -1.5585218393621147e-9,
+        "attitude": 1.558521756095388e-9,
+        "altitude": 46.880021206103265
+      },
+      {
+        "time": 5.299999999999975,
+        "phase": "ASCENT",
+        "position": [
+          -0.01132137829043231,
+          51.22275797370821,
+          0
+        ],
+        "theta": -1.7750147683062364e-9,
+        "attitude": 1.7750148018080836e-9,
+        "altitude": 51.22275797370821
+      },
+      {
+        "time": 5.51999999999997,
+        "phase": "ASCENT",
+        "position": [
+          -0.01282744223689185,
+          55.77469326648861,
+          0
+        ],
+        "theta": -2.011140567558141e-9,
+        "attitude": 2.0111405873990407e-9,
+        "altitude": 55.77469326648861
+      },
+      {
+        "time": 5.739999999999966,
+        "phase": "ASCENT",
+        "position": [
+          -0.014464649091147525,
+          60.53793917875737,
+          0
+        ],
+        "theta": -2.2678270789056043e-9,
+        "attitude": 2.267827037272241e-9,
+        "altitude": 60.53793917875737
+      },
+      {
+        "time": 5.959999999999961,
+        "phase": "ASCENT",
+        "position": [
+          -0.016238976541736363,
+          65.51461633946747,
+          0
+        ],
+        "theta": -2.546011435749021e-9,
+        "attitude": 2.5460114017050728e-9,
+        "altitude": 65.51461633946747
+      },
+      {
+        "time": 6.179999999999956,
+        "phase": "ASCENT",
+        "position": [
+          -0.018156461808326606,
+          70.70685397367924,
+          0
+        ],
+        "theta": -2.8466400974706124e-9,
+        "attitude": 2.846640034803727e-9,
+        "altitude": 70.70685397367924
+      },
+      {
+        "time": 6.3999999999999515,
+        "phase": "ASCENT",
+        "position": [
+          -0.020223201868169057,
+          76.11678995937109,
+          0
+        ],
+        "theta": -3.1706688845083673e-9,
+        "attitude": 3.1706688385924053e-9,
+        "altitude": 76.11678995937109
+      },
+      {
+        "time": 6.619999999999947,
+        "phase": "ASCENT",
+        "position": [
+          -0.02244535368227761,
+          81.74657089449465,
+          0
+        ],
+        "theta": -3.519063013375772e-9,
+        "attitude": 3.5190630409687174e-9,
+        "altitude": 81.74657089449465
+      },
+      {
+        "time": 6.839999999999942,
+        "phase": "ASCENT",
+        "position": [
+          -0.02482913442134019,
+          87.5983521649614,
+          0
+        ],
+        "theta": -3.8927971316273305e-9,
+        "attitude": 3.892797195703679e-9,
+        "altitude": 87.5983521649614
+      },
+      {
+        "time": 7.059999999999937,
+        "phase": "ASCENT",
+        "position": [
+          -0.02738082169654766,
+          93.67429800424725,
+          0
+        ],
+        "theta": -4.292855353583026e-9,
+        "attitude": 4.292855404486318e-9,
+        "altitude": 93.67429800424725
+      },
+      {
+        "time": 7.279999999999933,
+        "phase": "ASCENT",
+        "position": [
+          -0.030106753789464032,
+          99.97658155485988,
+          0
+        ],
+        "theta": -4.720231295890151e-9,
+        "attitude": 4.720231316923673e-9,
+        "altitude": 99.97658155485988
+      },
+      {
+        "time": 7.499999999999928,
+        "phase": "ASCENT",
+        "position": [
+          -0.033013329881284956,
+          106.50738493911922,
+          0
+        ],
+        "theta": -5.1759281129767215e-9,
+        "attitude": 5.175928130540797e-9,
+        "altitude": 106.50738493911922
+      },
+      {
+        "time": 7.719999999999923,
+        "phase": "ASCENT",
+        "position": [
+          -0.03610701028736367,
+          113.26889932062477,
+          0
+        ],
+        "theta": -5.660958533318036e-9,
+        "attitude": 5.660958590780751e-9,
+        "altitude": 113.26889932062477
+      },
+      {
+        "time": 7.939999999999919,
+        "phase": "ASCENT",
+        "position": [
+          -0.03939431669251084,
+          120.26332497037947,
+          0
+        ],
+        "theta": -6.176344895811661e-9,
+        "attitude": 6.176344991004612e-9,
+        "altitude": 120.26332497037947
+      }
+    ]
+  },
+  "renderedMissionTime": 7.999999999999917,
+  "backlogSeconds": 2.187625081084832e-13,
+  "performance": {
+    "fps": 13,
+    "drawCalls": 69,
+    "triangles": 227000,
+    "geometries": 107,
+    "textures": 27
+  },
+  "coordinates": "SI metres; Y-up; floating origin at vehicle, radial tangent basis; maps use scaled distances"
+}
